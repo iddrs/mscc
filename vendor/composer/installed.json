@@ -1,0 +1,80 @@
+{
+    "packages": [
+        {
+            "name": "satur.io/duckdb",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/satur-io/duckdb-php.git",
+                "reference": "d09caa5a0ea630683b707d739fc5d055bd9427e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/satur-io/duckdb-php/zipball/d09caa5a0ea630683b707d739fc5d055bd9427e9",
+                "reference": "d09caa5a0ea630683b707d739fc5d055bd9427e9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ffi": "*",
+                "php": ">=8.3"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpbench/phpbench": "^1.4",
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^11.5"
+            },
+            "suggest": {
+                "ext-bcmath": "Required for numbers > PHP_INT_MAX",
+                "ext-zend-opcache": "For a better perfomance using a preload function"
+            },
+            "time": "2026-04-02T22:51:43+00:00",
+            "default-branch": true,
+            "bin": [
+                "install-c-lib"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "aliases.php",
+                    "config.php"
+                ],
+                "psr-4": {
+                    "Saturio\\DuckDB\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Hernández-Marín",
+                    "email": "dani@satur.io"
+                }
+            ],
+            "description": "DuckDB API for PHP",
+            "keywords": [
+                "database",
+                "duckdb",
+                "ffi",
+                "performance"
+            ],
+            "support": {
+                "issues": "https://github.com/satur-io/duckdb-php/issues",
+                "source": "https://github.com/satur-io/duckdb-php/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://ko-fi.com/saturio",
+                    "type": "ko_fi"
+                }
+            ],
+            "install-path": "../satur.io/duckdb"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

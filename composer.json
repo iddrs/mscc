@@ -1,0 +1,26 @@
+{
+  "name": "contabilidade/mscc",
+  "description": "Conversor dos *.csv da MSC para DuckDB.",
+  "type": "tool",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "MscConverter\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "everton3x",
+      "email": "everton3x@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=8.5",
+    "satur.io/duckdb": "dev-main"
+  },
+  "scripts": {
+    "post-install-cmd": "\\Saturio\\DuckDB\\CLib\\Installer::install",
+    "post-update-cmd": "\\Saturio\\DuckDB\\CLib\\Installer::install"
+  }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/sql/00-import-raw.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/01-create-key.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/10-create-table.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/20-import-meta.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/21-fmt-nr-nd.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/30-calc-values.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/81-load-external-data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/82-update-external-data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/90-delete.sql" dialect="GenericSQL" />
+  </component>
+</project>

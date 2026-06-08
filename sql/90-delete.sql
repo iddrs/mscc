@@ -1,0 +1,10 @@
+drop table msc_raw;
+drop table pcasp;
+drop table po;
+drop table funcao;
+drop table subfuncao;
+drop table ndo;
+drop table nro;
+drop table exercicio_fr;
+drop table fr;
+drop table co;
