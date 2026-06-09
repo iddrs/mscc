@@ -1,0 +1,10 @@
+drop table msc_raw;
+drop table msc_pcasp;
+drop table msc_po;
+drop table msc_funcao;
+drop table msc_subfuncao;
+drop table msc_ndo;
+drop table msc_nro;
+drop table msc_exercicio_fr;
+drop table msc_fr;
+drop table msc_co;
