@@ -27,6 +27,7 @@ $source_file = $argv[1] ?? null;
 $output_file = $argv[2] ?? null;
 if(is_null($source_file) || is_null($output_file)) {
     Output::showHelp();
+    exit;
 }
 
 $source_file = realpath($source_file);
