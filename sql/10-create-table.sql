@@ -1,6 +1,7 @@
 create table if not exists msc
 (
     chave varchar,
+    entidade varchar(4),
     remessa uinteger,
     conta_contabil varchar(15),
     nome_conta_contabil varchar(255),
