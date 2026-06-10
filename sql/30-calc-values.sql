@@ -28,7 +28,8 @@ set
             and TipoValor like 'ending_balance'
             and NaturezaValor like 'C')
     )
-where remessa = {{remessa}};
+where remessa = {{remessa}}
+and substring(conta_contabil, 1, 1) in ('1', '3', '5', '7');
 
 update msc
 set
@@ -60,7 +61,8 @@ where remessa = {{remessa}}
   and TipoValor like 'ending_balance'
   and NaturezaValor like 'D')
     )
-where remessa = {{remessa}};
+where remessa = {{remessa}}
+  and substring(conta_contabil, 1, 1) in ('2', '4', '6', '8');
 
 update msc
 set

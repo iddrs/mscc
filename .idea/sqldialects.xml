@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/sql/10-create-table.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/sql/20-import-meta.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/sql/21-fmt-nr-nd.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/22-set-entidade.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/sql/30-calc-values.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/sql/81-load-external-data.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/sql/82-update-external-data-pcasp.sql" dialect="GenericSQL" />
