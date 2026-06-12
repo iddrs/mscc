@@ -15,10 +15,10 @@ class Output
 
     static public function showHelp(): void
     {
-        self::writenl('mscc source_file output_file');
+        self::writenl('mscc source_dir output_file');
         self::writenl();
         self::writenl('Argumentos:');
-        self::writenl("\tsource_file\tCaminho para o arquivo *.csv da MSC.");
+        self::writenl("\tsource_dir\tCaminho para o diretório com arquivos *.csv da MSC.");
         self::writenl("\toutput_file\tCaminho para o arquivo DuckDB.");
     }
 }

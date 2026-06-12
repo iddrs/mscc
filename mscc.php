@@ -23,21 +23,26 @@ if($argc < 3) {
     Output::showHelp();
 }
 
-$source_file = $argv[1] ?? null;
+$source_dir = $argv[1] ?? null;
 $output_file = $argv[2] ?? null;
-if(is_null($source_file) || is_null($output_file)) {
+if(is_null($source_dir) || is_null($output_file)) {
     Output::showHelp();
     exit;
 }
 
-$source_file = realpath($source_file);
-if(!file_exists($source_file)) {
-    Output::writenl("Arquivo da MSC não encontrado: $source_file");
+if(!is_dir($source_dir)) {
+    Output::println("$source_dir não é um diretório.");
+    exit();
+}
+
+$source_dir = realpath($source_dir);
+if(!file_exists($source_dir)) {
+    Output::writenl("Diretório da MSC não encontrado: $source_dir");
     exit;
 }
-Output::writenl("Source file: $source_file");
+Output::writenl("Source dir: $source_dir");
 Output::writenl("Output file: $output_file");
 
 // Iniciando o processamento
-$processor = new \MscConverter\Convert\Process($source_file, $output_file);
+$processor = new \MscConverter\Convert\Process($source_dir, $output_file);
 $processor->run();

@@ -3,6 +3,10 @@
 namespace MscConverter\Convert;
 
 use MscConverter\Support\Output;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
+use RecursiveRegexIterator;
+use RegexIterator;
 use Saturio\DuckDB\DuckDB;
 use Saturio\DuckDB\DB\Configuration;
 
@@ -12,7 +16,7 @@ class Process
     private ?DuckDB $db = null;
 
     public function __construct(
-        public readonly string $sourceFile,
+        public readonly string $sourceDir,
         public readonly string $outputFile
     )
     {
@@ -21,9 +25,11 @@ class Process
 
     public function run(): void
     {
-        $this->readContext();
         $this->connectDb();
-        $this->executeQueries();
+        foreach ($this->getSourceFiles() as $sourceFile) {
+            $this->readContext($sourceFile);
+            $this->executeQueries();
+        }
     }
 
     private function executeQueries(): void
@@ -43,12 +49,25 @@ class Process
         $duckConfig->set('access_mode', 'READ_WRITE');
         $this->db = DuckDB::create($this->outputFile, config: $duckConfig);
     }
-    private function readContext(): void
+
+    private function getSourceFiles(): array
     {
-        $fh = fopen($this->sourceFile, 'r');
+        $sourceFiles = [];
+        $dirIterator = new RegexIterator(
+            new RecursiveIteratorIterator(
+                new RecursiveDirectoryIterator($this->sourceDir, RecursiveDirectoryIterator::SKIP_DOTS)), '/^.+\.csv$/i', RecursiveRegexIterator::GET_MATCH);
+        foreach ($dirIterator as $item) {
+                $sourceFiles[] = realpath($item[0]);
+        }
+        return $sourceFiles;
+    }
+
+    private function readContext(string $sourceFile): void
+    {
+        $fh = fopen($sourceFile, 'r');
         $header = fgetcsv($fh, null, ';', '"', '\\');
         $this->context = [
-            '{{source_file}}' => $this->sourceFile,
+            '{{source_file}}' => $sourceFile,
             '{{code}}' => $header[0],
             '{{remessa}}' => (int) str_replace("-", '', $header[1]),
         ];
