@@ -1,12 +1,13 @@
 <?php
 
-use \MscConverter\Support\Output;
 
 
 // Prepara o ambiente
 
 // Carrega as bibliotecas necessárias
-require "vendor/autoload.php";
+require __DIR__."/vendor/autoload.php";
+
+use \MscConverter\Support\Output;
 
 
 // Exibe mensagem inicial
@@ -31,7 +32,7 @@ if(is_null($source_dir) || is_null($output_file)) {
 }
 
 if(!is_dir($source_dir)) {
-    Output::println("$source_dir não é um diretório.");
+    Output::writenl("$source_dir não é um diretório.");
     exit();
 }
 
