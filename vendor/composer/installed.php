@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'contabilidade/mscc',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'c34e5edc7a37b5df547def05bdae7e0cf0061f71',
         'type' => 'tool',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'contabilidade/mscc' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'c34e5edc7a37b5df547def05bdae7e0cf0061f71',
             'type' => 'tool',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

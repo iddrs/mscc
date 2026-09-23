@@ -12,22 +12,22 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
     );
 
     public static $prefixLengthsPsr4 = array (
-        'S' => 
+        'S' =>
         array (
             'Saturio\\DuckDB\\' => 15,
         ),
-        'M' => 
+        'M' =>
         array (
             'MscConverter\\' => 13,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Saturio\\DuckDB\\' => 
+        'Saturio\\DuckDB\\' =>
         array (
             0 => __DIR__ . '/..' . '/satur.io/duckdb/src',
         ),
-        'MscConverter\\' => 
+        'MscConverter\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
