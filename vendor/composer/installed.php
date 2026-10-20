@@ -3,7 +3,7 @@
         'name' => 'contabilidade/mscc',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c34e5edc7a37b5df547def05bdae7e0cf0061f71',
+        'reference' => '61bc5d82a254a86460f327872c16936cd94c0ea8',
         'type' => 'tool',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'contabilidade/mscc' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c34e5edc7a37b5df547def05bdae7e0cf0061f71',
+            'reference' => '61bc5d82a254a86460f327872c16936cd94c0ea8',
             'type' => 'tool',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -22,7 +22,7 @@
         'satur.io/duckdb' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd09caa5a0ea630683b707d739fc5d055bd9427e9',
+            'reference' => '9e30b059d5b86fc1e8025d448e20bdeeea21a0e3',
             'type' => 'library',
             'install_path' => __DIR__ . '/../satur.io/duckdb',
             'aliases' => array(

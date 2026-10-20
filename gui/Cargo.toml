@@ -1,0 +1,17 @@
+[package]
+name = "mscc-gui"
+version = "0.1.0"
+edition = "2024"
+description = "Interface gráfica (Iced) para o MSC Converter — php mscc.php"
+authors = ["Everton da Rosa <everton3x@gmail.com>"]
+license = "MIT"
+publish = false
+
+[dependencies]
+iced = { version = "0.14", features = ["tokio"] }
+rfd = "0.17"
+tokio = { version = "1", features = ["process", "io-util", "macros"] }
+
+[profile.release]
+lto = "thin"
+strip = true

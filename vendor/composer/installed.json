@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/satur-io/duckdb-php.git",
-                "reference": "d09caa5a0ea630683b707d739fc5d055bd9427e9"
+                "reference": "9e30b059d5b86fc1e8025d448e20bdeeea21a0e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/satur-io/duckdb-php/zipball/d09caa5a0ea630683b707d739fc5d055bd9427e9",
-                "reference": "d09caa5a0ea630683b707d739fc5d055bd9427e9",
+                "url": "https://api.github.com/repos/satur-io/duckdb-php/zipball/9e30b059d5b86fc1e8025d448e20bdeeea21a0e3",
+                "reference": "9e30b059d5b86fc1e8025d448e20bdeeea21a0e3",
                 "shasum": ""
             },
             "require": {
@@ -29,7 +29,7 @@
                 "ext-bcmath": "Required for numbers > PHP_INT_MAX",
                 "ext-zend-opcache": "For a better perfomance using a preload function"
             },
-            "time": "2026-04-02T22:51:43+00:00",
+            "time": "2026-08-15T10:24:39+00:00",
             "default-branch": true,
             "bin": [
                 "install-c-lib"
